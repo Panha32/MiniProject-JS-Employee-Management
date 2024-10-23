@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        JavaScript CRUD Mini-Project
+    </title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body style="background-image: url(asset/bg.jpg);">
+
+    <div class="frame">
+        <div class="clock-frame">
+            <div id="DigitalClock" class="clock" onload="showTime()"></div>
+        </div>
+    
+        <div class="watch">
+            <div class="hour-hand"></div>
+            <div class="minute-hand"></div>
+            <div class="second-hand"></div>
+            <div class="center-point"></div>
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+            <div class="box box4"></div>
+        </div>
+    </div>
+
+    <div class="school-logo">
+        <img src="asset/ant-logo.png" alt="ANT Training Center">
+    </div>
+      
+	<h1 class="title">Employee Management</h1>
+	<hr>
+    <br>
+	<div class="employee-form">
+        <form autocomplete="off">
+            <div>
+                <label>Full Name</label>
+                <label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                <input type="text" name="fullName" id="fullName">
+            </div>
+            <div>
+                <label>Email ID</label>
+                <label class="validation-error hide" id="emailValidationError">This field is required.</label>
+                <input type="text" name="email" id="email">
+            </div>
+            <div>
+                <label>Salary</label>
+                <label class="validation-error hide" id="salaryValidationError">This field is required.</label>
+                <input type="text" name="salary" id="salary">
+            </div>
+            <div>
+                <label>City</label>
+                <label class="validation-error hide" id="cityValidationError">This field is required.</label>
+                <input type="text" name="city" id="city">
+            </div>
+            <div class="form-action-buttons">
+                <input type="button" value="Submit">
+            </div>
+        </form>
+    </div>
+    <br/>
+	<div class="employees-table">
+        <table class="list" id="employeeList">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th><i class="fa-solid fa-envelope"></i> Email ID</th>
+                    <th>Salary</th>
+                    <th><i class="fa-solid fa-location-dot"></i> City</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+               
+            </tbody>
+        </table>
+    </div>
+
+    <script src="clock.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

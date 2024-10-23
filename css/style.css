@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Tint&family=Train+One&display=swap');
+
+@font-face {
+  font-family: digital-7;
+  src: url(digital-7.ttf);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-size: cover;
+  backdrop-filter: blur(5px);
+  padding-bottom: 30px;
+}
+
+.school-logo {
+  position: absolute;
+  top: 5px;
+  left: 50px;
+}
+
+.school-logo img {
+  width: 110px;
+  object-fit: cover;
+}
+
+.frame {
+  position: absolute;
+  right: 50px;
+  top: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.clock-frame {
+  width: 260px;
+  padding: 10px 0;
+  position: relative;
+  letter-spacing: 5px;
+  background-color: #f3f1f1;
+  border: 4px double #ddd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.clock {
+  font-size: 40px;
+  font-family: digital-7;
+}
+
+.session {
+  position: absolute;
+  font-size: 25px;
+  bottom: 14px;
+  right: 6px;
+}
+
+.watch {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border: 5px double #d8d7d7;
+  border-radius: 50%;
+  background-color: #ffffff69;
+  box-shadow: inset 0px 0px 30px 0px rgb(207, 206, 206);
+  overflow: hidden;
+}
+
+.center-point {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255, 208, 0);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 7;
+}
+
+.hour-hand,
+.minute-hand,
+.second-hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: rotate(90deg);
+}
+
+.hour-hand {
+  width: 4px;
+  height: 35px;
+  background-color: black;
+  z-index: 1;
+}
+
+.minute-hand {
+  width: 2px;
+  height: 48px;
+  background-color: gold;
+  z-index: 2;
+}
+
+.second-hand {
+  width: 1px;
+  height: 60px;
+  background-color: red;
+  z-index: 3;
+}
+
+.box {
+  width: 3px;
+  height: 5px;
+  background-color: #000;
+  position: absolute;
+}
+
+.box2,
+.box4 {
+  width: 5px;
+  height: 3px;
+}
+
+.box1 {
+  top: 0;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.box2 {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.box3 {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.box4 {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ======================== */
+
+.title {
+  color: #fff;
+  text-align: center;
+  font-family: "Train One", system-ui;
+}
+
+hr {
+  border: 3px groove #ffffff58;
+}
+
+.employee-form {
+  border-radius: 5px;
+  padding: 20px;
+  margin: auto;
+  width: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.employees-table {
+  border-radius: 5px;
+  padding: 20px;
+  margin: auto;
+  width: 70%;
+  background-color: #2b739a;
+}
+
+body > table {
+  width: 80%;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #cac9c968;
+  border-top: none;
+}
+
+table.list {
+  width: 100%;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 8px;
+  color: #ebebeb;
+}
+
+th:first-child,
+th:nth-child(2) {
+  text-align: left;
+}
+
+th,
+td:nth-child(3),
+td:nth-child(4),
+td:last-child {
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #edebeb29;
+}
+
+table.list thead > tr {
+  background-color: #034bf6;
+  color: #fff;
+}
+
+td:last-child {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  font-size: 18px;
+}
+
+td:last-child a:first-child,
+td:last-child a:nth-child(2),
+td:last-child a:nth-child(3) {
+  position: relative;
+}
+
+td:last-child a:first-child::before,
+td:last-child a:nth-child(2)::before,
+td:last-child a:nth-child(3)::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 208, 0);
+  top: -25px;
+  left: -2px;
+  transform: rotate(45deg);
+  display: none;
+}
+
+td:last-child a:first-child:after,
+td:last-child a:nth-child(2):after,
+td:last-child a:nth-child(3):after {
+  position: absolute;
+  display: none;
+  font-size: 15px;
+  color: #fff;
+  border-radius: 5px;
+  content: "Edit";
+  width: 100px;
+  padding: 5px 0;
+  background-color: rgb(255, 208, 0);
+  top: -35px;
+  left: -100%;
+  transform: translateX(-25%);
+}
+
+td:last-child a:first-child:after {
+  color: #000;
+}
+
+td:last-child a:first-child:hover:after,
+td:last-child a:nth-child(2):hover:after,
+td:last-child a:nth-child(3):hover:after,
+td:last-child a:first-child:hover::before,
+td:last-child a:nth-child(2):hover::before,
+td:last-child a:nth-child(3):hover::before {
+  display: block;
+}
+
+td:last-child a:nth-child(2)::before {
+  background-color: #000;
+}
+td:last-child a:nth-child(2):after {
+  content: "Print";
+  background-color: #000;
+}
+
+td:last-child a:nth-child(3)::before {
+  background-color: red;
+}
+td:last-child a:nth-child(3):after {
+  content: "Delete";
+  background-color: red;
+}
+
+td:last-child a:nth-child(2) {
+  color: #000;
+}
+
+td:last-child a:nth-child(3) {
+  color: red;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px 15px;
+  margin: 8px 0;
+  font-size: 17px;
+  display: inline-block;
+  background-color: #ffffff5f;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+  outline-color: #f7e26e60;
+  border: 1px solid transparent;
+  background-color: #fff;
+}
+
+input[type="button"] {
+  margin-top: 5px;
+  width: 30%;
+  background-color: #034bf6;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="button"]:hover {
+  color: #000;
+  background-color: rgb(255, 208, 0);
+}
+
+input[type="button"]:focus {
+  outline: none;
+}
+
+form div.form-action-buttons {
+  text-align: right;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(255, 208, 0);
+  margin-right: 4px;
+}
+
+label {
+  color: #fff;
+}
+
+label.validation-error {
+  color: rgb(255, 0, 0);
+  color: #fff;
+  margin-left: 5px;
+  font-size: 13px;
+  font-weight: normal;
+  padding: 2px 10px;
+  background-color: rgba(255, 0, 0, 0.562);
+  border-radius: 5px;
+}
+
+.hide {
+  display: none;
+}
